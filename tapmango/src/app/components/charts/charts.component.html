@@ -1,0 +1,35 @@
+<div class="dashWrapper">
+  <div class="dashInnerWrapper">
+    <div class="dashMargin"><input type="date" [(ngModel)]="start" /></div>
+    <div class="dashMargin"><input type="date" [(ngModel)]="end" /></div>
+    <div class="dashMargin">
+      <button (click)="periodChanged(true)">Apply</button>
+    </div>
+    <div>
+      <select [(ngModel)]="period" (change)="periodChanged()">
+        <option *ngFor="let opt of periodOptions">{{ opt }}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center">Scroll to zoom in</div>
+<br />
+
+<app-chart-widget
+  [legend]="chart1Legend"
+  [loading]="loading"
+  [start]="start"
+  [end]="end"
+></app-chart-widget>
+<br />
+<app-chart-widget
+  [legend]="chart2Legend"
+  [loading]="loading"
+  [start]="start"
+  [end]="end"
+></app-chart-widget>
+<br />
+<br />
+<br />
+<br />

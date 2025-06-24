@@ -1,0 +1,104 @@
+.chartOuterWrapper {
+  margin: auto;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+}
+
+.period {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.chartTopWrapper {
+  border-bottom: 2px solid #f2f2f2;
+  padding: 15px 15px;
+}
+
+.chartInnerWrapper {
+  padding: 10px 15px;
+}
+
+.chartLegend {
+  display: flex;
+}
+
+.chartPlaceHolder {
+  height: 370px;
+}
+
+.spinnerWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #cfcfcf;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.chartLegendLeft {
+  margin-right: 25px;
+}
+
+.chartLegendRight {
+  margin-right: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.largeNum {
+  font-size: 20px;
+}
+
+.smallNumWraper {
+  padding-left: 8px;
+  padding-top: 5px;
+}
+
+.smallNum {
+  background-color: #f4fcf7;
+  color: #51bb78;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.legendColorDot {
+  height: 11px;
+  width: 11px;
+  background-color: #eec137;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+
+.blue {
+  background-color: #06b6d4;
+}
+
+.legendTag {
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

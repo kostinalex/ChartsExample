@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "clear && docker stop tapmangoapi && docker rm tapmangoapi && docker build . -t kostinalex/tapmangoapi && docker run -p 49000:8080 --name tapmangoapi -d kostinalex/tapmangoapi",
+    "build": "docker build . -t kostinalex/tapmangoapi",
+    "push": "docker push kostinalex/tapmangoapi",
+    "deploy": "clear && npm run build && npm run push && sudo ssh -i ~/.ssh/hetzner_new root@kostinalex.com \"docker pull kostinalex/tapmangoapi && cd /etc/nginx && docker-compose up -d tapmangoapi && docker image prune -af\" && echo DONE!!!",
+    "start": "clear && dotnet watch run"
+  }
+}

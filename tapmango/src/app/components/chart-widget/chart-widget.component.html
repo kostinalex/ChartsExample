@@ -1,0 +1,61 @@
+<div class="chartOuterWrapper">
+  <div *ngIf="loading == false" class="chartTopWrapper">
+    <div class="chartHeader">{{ legend.header }}</div>
+    <div class="period">
+      Looking at period of {{ formatDate(start) }} - {{ formatDate(end) }}
+    </div>
+  </div>
+  <div *ngIf="loading == false" class="chartInnerWrapper">
+    <div class="chartLegend">
+      <div class="chartLegendLeft">
+        <div class="flex">
+          <div class="largeNum">${{ legend.leftNumber | number }}</div>
+          <div class="smallNumWraper">
+            <div class="smallNum">
+              +{{ legend.leftPerc | number : "1.2-2" }}%
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <div class="legendColorDot"></div>
+          </div>
+          <div class="legendTag">
+            {{ legend.leftTag }}
+          </div>
+        </div>
+      </div>
+      <div class="chartLegendRight">
+        <div class="flex">
+          <div class="largeNum">${{ legend.rightNumber | number }}</div>
+          <div class="smallNumWraper">
+            <div class="smallNum">
+              +{{ legend.rightPerc | number : "1.2-2" }}%
+            </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <div class="legendColorDot blue"></div>
+          </div>
+          <div class="legendTag">
+            {{ legend.rightTag }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 17px">
+      <app-chart
+        [legend]="legend"
+        [data]="data"
+        [loading]="loading"
+        [start]="start"
+        [end]="end"
+      ></app-chart>
+    </div>
+  </div>
+  <div *ngIf="loading" class="chartPlaceHolder">
+    <div class="spinnerWrapper"><span class="spinner"></span></div>
+  </div>
+</div>

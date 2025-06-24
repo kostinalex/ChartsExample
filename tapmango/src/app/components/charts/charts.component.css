@@ -1,0 +1,13 @@
+.dashWrapper {
+  margin: 50px 0px 40px 0px;
+}
+
+.dashInnerWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.dashMargin {
+  margin-right: 10px;
+}
