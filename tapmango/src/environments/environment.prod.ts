@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://api.kostinalex.com',
+  api: 'https://tapmangoapi.kostinalex.com',
 };
