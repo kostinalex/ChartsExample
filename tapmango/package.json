@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "copyFrontToServer": "sudo scp -r -i ~/.ssh/hetzner_new ./dist/browser/* root@kostinalex.com:/var/www/kostinalex.com",
+    "copyFrontToServer": "sudo scp -r -i ~/.ssh/hetzner_new ./dist/browser/* root@kostinalex.com:/var/www/tapmango.kostinalex.com",
     "deploy": "ng build && npm run copyFrontToServer"
   },
   "private": true,
